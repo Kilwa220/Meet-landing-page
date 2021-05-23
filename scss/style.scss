@@ -1,0 +1,54 @@
+// *** Typography:
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// *** Colors:
+$brand-color: hsl(300, 69%, 71%);
+$bg-color: hsl(257, 40%, 49%);
+$text-color: rgba(255, 255, 255, 0.7);
+// *** Start-Template Styles
+body {
+	background-color: $bg-color;
+	background-image: url("../images/bg-desktop.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1310px;
+	padding: 0 10px;
+	@media (max-width: 769px) {
+		max-width: 668px;
+		padding: 0 20px;
+	}
+}
+// *** Attribution ***
+.attribution {
+	color: hsl(0, 0%, 90%);
+	font-size: 11px;
+	text-align: center;
+	&__text {
+		margin-bottom: 10px;
+		a {
+			color: hsl(0, 0%, 100%);
+			transition: all 0.5s ease 0s;
+		}
+		a:hover {
+			color: #d07f15;
+		}
+		.grifano-logo {
+			color: white;
+			background-color: #0061cc;
+		}
+		.grifano-logo span {
+			color: #d07f15;
+			background-color: #0061cc;
+		}
+	}
+}
+// *** Project Styles ***
