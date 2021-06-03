@@ -2,7 +2,7 @@
 
 This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR).
 
-## Table of contents ❗️
+## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
@@ -14,7 +14,7 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+<!-- - [Acknowledgments](#acknowledgments) -->
 
 ## Overview
 
@@ -25,9 +25,9 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Screenshot ❗️
+### Screenshot
 
-![](./images/ScreenShot.jpg)
+![](./assets/ScreenShot.jpg)
 
 ### Links ❗️
 
@@ -36,30 +36,53 @@ Users should be able to:
 
 ## My process
 
-### Built with ❗️
+### Built with
 
 - Semantic HTML5 markup
 - JavaScript
 - CSS custom properties
 - Flexbox
+- Grid
 - Responsive images
 - Responsive Website
 
 ### What I learned ❗️
 
-Using "picture" tag, browser know what image should to load depending on viewport width 😀
-```html
-
-```
-
-I decide to create a custom arrow for tab headers Instead to use a svg. But I was wondering is that very complicated? Off Course a easy way is to use svg as a background image
+I start to learning about Grid. So, this is my first Implementation with this Layout Features. Such nice feelings 😊
 ```css
-
+.what-is-it__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  list-style-type: none;
+  margin: 0px 0px 80px 0px;
+  @media (max-width: 955px) {
+    grid-column-gap: 10px;
+  }
+}
 ```
 
-And this part is not clearly Understand For me. Why in if condition don't use an equal operator? It supposes if activeTab is true then run a code, but why activeTab Should be "true"? 
+I decided to find a solution for smooth transition between sections. And this manual to help me to do that. I don't wont to use a JQuery because it's just for one function, and don't need such a heavy Library like as JQuery.
 ```js
+<script>
+  const links = document.querySelectorAll(".hero__button");
 
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  }
+</script>
 ```
 
 ### Continued development
@@ -68,7 +91,8 @@ I want to continue to learn a JavaScript. Currently, I'm working on Course from 
 
 ### Useful resources ❗️
 
-[Resource title](link)
+[How to Implement Smooth Scrolling With Vanilla JavaScript](https://webdesign.tutsplus.com/tutorials/smooth-scrolling-vanilla-javascript--cms-35165)
+[Create Flexible Layouts Using auto-fit](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit)
 
 
 ## Author

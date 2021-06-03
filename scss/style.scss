@@ -1,18 +1,19 @@
 // *** Typography:
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+$font-family--main: "Red Hat Display", sans-serif;
 
 // *** Colors:
 $brand-color: hsl(300, 69%, 71%);
-$bg-color: hsl(257, 40%, 49%);
-$text-color: rgba(255, 255, 255, 0.7);
+$button-color-download: #4d96a9;
+$button-color: #855fb1;
+$bg-color: #fafafa;
+$text-color: #87879d;
+$heading-color: #28283d;
 // *** Start-Template Styles
 body {
 	background-color: $bg-color;
-	background-image: url("../images/bg-desktop.svg");
-	background-size: cover;
-	background-repeat: no-repeat;
 	display: flex;
+	font-family: $font-family--main;
 	flex-direction: column;
 	flex-grow: 1;
 	justify-content: space-between;
@@ -20,11 +21,15 @@ body {
 }
 .container {
 	margin: 0 auto;
-	max-width: 1310px;
-	padding: 0 10px;
-	@media (max-width: 769px) {
-		max-width: 668px;
-		padding: 0 20px;
+	max-width: 1160px;
+	padding: 0 25px;
+}
+.container--tablet {
+	@media (max-width: 955px) {
+		max-width: 623px;
+	}
+	@media (max-width: 425px) {
+		max-width: none;
 	}
 }
 // *** Attribution ***
@@ -32,6 +37,8 @@ body {
 	color: hsl(0, 0%, 90%);
 	font-size: 11px;
 	text-align: center;
+	position: relative;
+	z-index: 1;
 	&__text {
 		margin-bottom: 10px;
 		a {
@@ -52,3 +59,258 @@ body {
 	}
 }
 // *** Project Styles ***
+.header {
+	text-align: center;
+}
+.logo {
+	display: inline-block;
+	margin-top: 50px;
+}
+.heading {
+	display: inline-block;
+	color: $heading-color;
+	font-size: 4rem;
+	line-height: 1;
+	font-weight: 900;
+	text-align: center;
+	&__subheading {
+		display: block;
+		color: #4d96a9;
+		font-size: 16px;
+		font-weight: 900;
+		line-height: 1.6;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		margin: 0px 0px 20px 0px;
+	}
+	@media (max-width: 769px) {
+		font-size: 3.1rem;
+		margin: 0px 0px 15px 0px;
+	}
+}
+.text {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	font-weight: 500;
+	color: $text-color;
+}
+.button {
+	&__version {
+		color: #8fe3f9;
+	}
+	&__version--purple {
+		color: #d9b8ff;
+	}
+	text-decoration: none;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 900;
+	line-height: 1.6;
+	padding: 16px 43px;
+	border-radius: 29px;
+	transition: all 0.3s ease 0s;
+}
+.button--green {
+	background-color: $button-color-download;
+	&:hover {
+		background-color: #71c0d4;
+	}
+}
+.button--purple {
+	background-color: $button-color;
+	&:hover {
+		background-color: #b18bdd;
+	}
+}
+.hero {
+	height: 100vh;
+	margin: -50px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	@media (max-width: 769px) {
+		background-image: url("../assets/tablet/image-hero.png");
+		background-repeat: no-repeat;
+		background-position: center top 12%;
+		background-size: 110%;
+	}
+	&__column {
+	}
+	&__column--middle {
+		flex: 1 0 auto;
+		@media (max-width: 769px) {
+			flex: 1 1 auto;
+		}
+	}
+	&__people--left {
+		width: 394px;
+		height: 303px;
+		margin: 0px 0px 0px -30px;
+		img {
+			display: block;
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 769px) {
+			display: none;
+		}
+	}
+
+	&__people--right {
+		width: 394px;
+		height: 303px;
+		margin: 0px -30px 0px 0px;
+		img {
+			display: block;
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 769px) {
+			display: none;
+		}
+	}
+
+	&__content {
+		display: inline-block;
+		max-width: 560px;
+		padding: 0 10px;
+		text-align: center;
+		@media (max-width: 769px) {
+			padding: 0px 25px;
+			margin: 40% 0px 0px 0px;
+		}
+	}
+
+	&__heading {
+		max-width: 445px;
+		margin: 0px 0px 35px 0px;
+		@media (max-width: 769px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__text {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__button {
+		margin: 8px;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.what-is-it {
+	min-height: 100vh;
+	padding: 10vmax 0px 50px 0px;
+	text-align: center;
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+		grid-column-gap: 30px;
+		grid-row-gap: 10px;
+		list-style-type: none;
+		margin: 0px 0px 80px 0px;
+		@media (max-width: 955px) {
+			grid-column-gap: 10px;
+		}
+	}
+
+	&__item {
+		border-radius: 8px;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__heading {
+		font-size: 40px;
+		line-height: 1.1;
+		max-width: 445px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: 425px) {
+			max-width: 305px;
+			font-size: 32px;
+		}
+	}
+
+	&__text {
+		margin: 0 auto;
+		max-width: 540px;
+		@media (max-width: 995px) {
+			max-width: none;
+		}
+	}
+}
+.footer {
+	padding: 116px 0px 74px;
+	background-image: url("../assets/desktop/image-footer.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	@media (max-width: 955px) {
+		padding: 92px 0px 32px;
+	}
+
+	&::before {
+		background-color: #4d96a9;
+		opacity: 0.8;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__row {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: 955px) {
+			flex-direction: column;
+			min-height: 100%;
+		}
+	}
+
+	&__heading {
+		max-width: 350px;
+		font-size: 40px;
+		line-height: 1.1;
+		color: #fafafa;
+		text-align: left;
+		@media (max-width: 955px) {
+			font-size: 32px;
+			text-align: center;
+			margin: 0px 0px 25px 0px;
+		}
+	}
+
+	&__text {
+		max-width: 350px;
+		color: #fafafa;
+		text-align: left;
+		opacity: 0.8;
+		@media (max-width: 955px) {
+			max-width: none;
+			text-align: center;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	&__button {
+	}
+}

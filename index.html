@@ -23,51 +23,106 @@
 
   <header class="header">
     <div class="container">
-
+      <a href="#" class="logo">
+        <img src="./assets/logo.svg" alt="Main logo meetApp">
+      </a>
     </div>
   </header>
 
   <main>
 
     <section class="hero">
-      <div class="container">
-        Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
-
-        Download v1.3
-        What is it?
-
-        01
-        Built for modern use
-
-        Smarter meetings, all in one place
-
-        Send messages, share files, show your screen, and record your meetings — all in one
-        workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-        02
-        Experience more together
-        Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-        Download v1.3
+      <div class="hero__column">
+        <div class="hero__people--left">
+          <img src="./assets/desktop/image-hero-left.png" alt="Profile what-is-it with smiling peoples">
+        </div>
       </div>
+      <div class="hero__column hero__column--middle ">
+        <div class="hero__content">
+          <h1 class="hero__heading heading">Group Chat for Everyone</h1>
+          <p class="hero__text text">
+            Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+          </p>
+          <a href="" class="hero__button button button--green">Download <span class="button__version">v1.3</span></a>
+          <a href="#what-is-it" class="hero__button button button--purple">What is it?</a>
+        </div>
+      </div>
+      <div class="hero__column">
+        <div class="hero__people--right">
+          <img src="./assets/desktop/image-hero-right.png" alt="Profile what-is-it with smiling peoples">
+        </div>
+      </div>
+    </section>
+    <section id="what-is-it" class="what-is-it">
+      <div class="container">
+        <ul class="what-is-it__row">
+          <li class="what-is-it__item"><img src="./assets/desktop/image-woman-in-videocall.jpg"
+              alt="Woman in videocall">
+          </li>
+          <li class="what-is-it__item"><img src="./assets/desktop/image-women-videochatting.jpg"
+              alt="Women videochatting">
+          </li>
+          <li class="what-is-it__item"><img src="./assets/desktop/image-men-in-meeting.jpg" alt="Men in meeting"></li>
+          <li class="what-is-it__item"><img src="./assets/desktop/image-man-texting.jpg" alt="Man texting"></li>
+        </ul>
+      </div>
+      <div class="container container--tablet">
+        <h2 class="what-is-it__heading heading">
+          <span class="heading__subheading">Built for modern use</span>
+          Smarter meetings, all in one place
+        </h2>
+        <p class="what-is-it__text text">
+          Send messages, share files, show your screen, and record your meetings — all in one
+          workspace. Control who can join with invite-only team access, data encryption, and data export
+        </p>
+      </div>
+
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container container--tablet">
+      <div class="footer__row">
 
+        <h2 class="footer__heading heading">Experience more together</h2>
+
+        <p class="footer__text text">
+          Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+        </p>
+
+        <a href="" class="footer__button button button--purple">Download <span
+            class="button__version--purple">v1.3</span></a>
+
+      </div>
+      <div class="attribution">
+        <p class="attribution__text">Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank">Frontend Mentor</a></p>
+        <p class="attribution__text">
+          Coded by <a href="#">Serhii <span class="grifano-logo"><span>{</span>Grifano<span>}</span></span> Orlenko</a>
+        </p>
+      </div>
     </div>
   </footer>
 
-  <aside class="attribution">
-    <p class="attribution__text">Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank">Frontend Mentor</a></p>
-    <p class="attribution__text">
-      Coded by <a href="#">Serhii <span class="grifano-logo"><span>{</span>Grifano<span>}</span></span> Orlenko</a>
-    </p>
-  </aside>
+  <script>
+    const links = document.querySelectorAll(".hero__button");
 
+    for (const link of links) {
+      link.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      const offsetTop = document.querySelector(href).offsetTop;
+
+      scroll({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 
 </html>
