@@ -29,7 +29,7 @@ Users should be able to:
 
 ![](./assets/ScreenShot.jpg)
 
-### Links ❗️
+### Links
 
 <!-- - Solution URL: [Solution]() -->
 - Live Site URL: [Live](https://grifano.github.io/FrontendMentor__Meet-Landing-Page/)
@@ -46,7 +46,7 @@ Users should be able to:
 - Responsive images
 - Responsive Website
 
-### What I learned ❗️
+### What I learned
 
 I start to learning about Grid. So, this is my first Implementation with this Layout Features. Such nice feelings 😊
 ```css
@@ -89,7 +89,7 @@ I decided to find a solution for smooth transition between sections. And this ma
 
 I want to continue to learn a JavaScript. Currently, I'm working on Course from Udemy. App Brewery Web Developer Bootcamp. And to do practice, practice and practice one more 😉
 
-### Useful resources ❗️
+### Useful resources 
 
 [How to Implement Smooth Scrolling With Vanilla JavaScript](https://webdesign.tutsplus.com/tutorials/smooth-scrolling-vanilla-javascript--cms-35165)
 [Create Flexible Layouts Using auto-fit](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit)
@@ -101,5 +101,3 @@ I want to continue to learn a JavaScript. Currently, I'm working on Course from 
 - Frontend Mentor - [@Grifano](https://www.frontendmentor.io/profile/Grifano)
 - Twitter - [@Grifano](https://twitter.com/OrlenkoSerhii)
 - LinkedIn - [@Grifano](https://www.linkedin.com/in/serhii-orlenko-44aaa4a3/)
-
-## Acknowledgments ❗️
